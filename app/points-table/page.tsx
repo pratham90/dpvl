@@ -91,7 +91,7 @@ const page = () => {
 }
 
 export default page
-function StatItem({ text }) {
+function StatItem({ text }: { text: string }) {
   return (
     <div className="flex items-center px-8 md:px-16">
       <span className="text-[#d66095] font-medium text-lg md:text-2xl tracking-wide">
