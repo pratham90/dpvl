@@ -94,7 +94,7 @@ export default function Pointstable() {
                   {/* Form Guide (Win/Loss Pills) */}
                   <td className="py-3 px-4">
                     <div className="flex items-center justify-center gap-1">
-                      {team.against.map((result, i) => (
+                      {team.against.map(({result}: {result: string}, {i}: {i: number}) => (
                         <div 
                           key={i}
                           className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm
