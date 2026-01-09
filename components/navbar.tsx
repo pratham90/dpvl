@@ -10,10 +10,16 @@ const Navbar = () => {
   const menuItems = [
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about-us" },
-    { name: "OUR TEAMS", href: "/our-teams" },
+    { name: "OUR TEAMS", href: "/teams" },
     { name: "NEWS", href: "/news" },
     { name: "BLOGS", href: "/blogs" },
     { name: "GALLERY", href: "/gallery" },
+    // new links
+    { name: "FIXTURES", href: "/fixtures" },
+    {name:"AUCTION", href:"/dpvl-auction" },
+    {name:"POINTSTAB", href:"/points-table" },
+    {name:"DPVLTV", href:"/dpvl-tv" },
+
   ];
 
   useEffect(() => {
