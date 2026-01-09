@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import Image from 'next/image';
 import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 import { HiArrowRight } from 'react-icons/hi';
@@ -117,7 +118,7 @@ export default function Footer() {
   );
 }
 
-function SocialIcon({ icon}) {
+function SocialIcon({ icon }: { icon: React.ReactNode }) {
   return (
     <a 
       href="#" 
