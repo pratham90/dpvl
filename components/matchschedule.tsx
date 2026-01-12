@@ -15,12 +15,12 @@ export default function MatchSchedule() {
   return (
     <section className="relative w-full py-16 px-4 md:px-8 bg-[#3b3bb7] overflow-hidden">
       
-      {/* 1. BACKGROUND LAYERS */}
+      
       <div className="absolute inset-0 w-full h-full z-0">
-        {/* Gradient Background */}
+
         <div className="absolute inset-0 bg-gradient-to-br from-[#4a7acdf5] via-[#3b3bb7] to-[#a259e6]" />
         
-        {/* Texture Overlay (Using footerimg.jpg as requested in previous contexts) */}
+    
         <Image
           src="/assets/footerimg.jpg"
           alt="Texture"
@@ -30,17 +30,16 @@ export default function MatchSchedule() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
-        
-        {/* 2. HEADING */}
+
         <div className="flex flex-col items-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold uppercase text-white mb-2 tracking-tighter" style={{ fontFamily: 'sans-serif' }}>
             Match Schedule
           </h2>
-          {/* Red Underline */}
+ 
           <div className="w-24 h-1 bg-[#d9534f] shadow-lg" />
         </div>
 
-        {/* 3. SCHEDULE LIST CONTAINER */}
+     
         <div className="w-full bg-[#e8eaf6] rounded-lg shadow-2xl overflow-hidden border-4 border-[#e8eaf6]/50">
           
           {matches.map((match, index) => (
@@ -54,34 +53,31 @@ export default function MatchSchedule() {
               `}
             >
               
-              {/* SECTION 1: MATCH NUMBER */}
-              {/* Mobile: Top Centered | Desktop: Left side with border */}
+             
               <div className="w-full md:w-[15%] flex justify-center md:justify-start">
                 <div className="flex items-center h-full">
                   <span className="font-black text-xl md:text-2xl uppercase text-black tracking-tight">
                     {match.id}
                   </span>
-                  {/* Vertical Divider (Desktop Only) */}
+             
                   <div className="hidden md:block h-10 w-[3px] bg-[#3b3bb7] ml-auto mr-4"></div>
                 </div>
               </div>
 
-              {/* SECTION 2: TEAMS VS */}
-              {/* Centered on both */}
+
               <div className="w-full md:w-[40%] flex items-center justify-center gap-4 md:gap-8">
                 
-                {/* Team 1 */}
+            
                 <div className="flex items-center gap-3">
                   <span className="font-bold text-gray-800 uppercase text-sm md:text-base">{match.t1}</span>
                   <div className="w-8 h-8 rounded-full bg-gray-200 text-[8px] flex items-center justify-center font-bold text-gray-500">TBD</div>
                 </div>
 
-                {/* VS Graphic */}
                 <div className="text-2xl md:text-3xl font-black italic text-[#3b3bb7] transform -skew-x-12">
                   VS
                 </div>
 
-                {/* Team 2 */}
+             
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-gray-200 text-[8px] flex items-center justify-center font-bold text-gray-500">TBD</div>
                   <span className="font-bold text-gray-800 uppercase text-sm md:text-base">{match.t2}</span>
@@ -89,10 +85,9 @@ export default function MatchSchedule() {
 
               </div>
 
-              {/* SECTION 3: STADIUM INFO */}
-              {/* Mobile: Centered | Desktop: Left aligned with divider */}
+        
               <div className="w-full md:w-[30%] flex justify-center md:justify-start relative">
-                 {/* Vertical Divider (Desktop Only) - Positioned absolutely left */}
+       
                  <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 h-10 w-[3px] bg-[#3b3bb7]"></div>
                  
                  <div className="flex flex-col items-center md:items-start md:pl-8 text-center md:text-left">
@@ -105,12 +100,11 @@ export default function MatchSchedule() {
                  </div>
               </div>
 
-              {/* SECTION 4: LEAGUE LOGO */}
-              {/* Mobile: Small & Centered | Desktop: Right Aligned */}
+
               <div className="w-full md:w-[15%] flex justify-center md:justify-end mt-2 md:mt-0">
                 <div className="relative w-16 h-8 md:w-20 md:h-10">
                   <Image 
-                    src="/assets/logo.jpg" // Replace with actual DPVL logo
+                    src="/assets/logo.jpg" 
                     alt="League Logo" 
                     fill 
                     className="object-contain opacity-80"

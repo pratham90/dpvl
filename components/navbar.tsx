@@ -53,7 +53,7 @@ const Navbar = () => {
     <Headline />
         <div className="mx-auto w-full max-w-[1350px] px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20 w-full">
-            {/* Logo */}
+            
             <Link href="/" className="shrink-0 flex items-center">
               <Image
                 src="/assets/logo.jpg"
@@ -64,7 +64,7 @@ const Navbar = () => {
                 priority
               />
             </Link>
-            {/* Desktop Navigation */}
+          
             <div className="hidden lg:flex items-center gap-6 xl:gap-8">
               {menuItems.map((item) => (
                 <Link
@@ -77,7 +77,7 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
-            {/* Contact Us Button */}
+          
             <div className="hidden lg:flex">
               <Link href="/contact-us">
                 <button className="ml-6 px-5 py-2 bg-[#3b3bb7] text-white font-semibold rounded-md shadow hover:bg-[#2a2a8a] transition-colors duration-200 text-[15px] uppercase">
@@ -85,7 +85,7 @@ const Navbar = () => {
                 </button>
               </Link>
             </div>
-            {/* Mobile Menu Button */}
+          
             <button
               className="lg:hidden ml-auto relative w-10 h-10 flex items-center justify-center focus:outline-none z-50"
               onClick={toggleMenu}
@@ -100,7 +100,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Overlay and Menu */}
+      
         <div
           className={`lg:hidden fixed inset-0 z-[100] transition-opacity duration-300 ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
           style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)', touchAction: 'none' }}
@@ -113,7 +113,7 @@ const Navbar = () => {
           <div className="w-full h-full flex items-start mt-24 justify-center mx-2">
             <div className="w-full max-w-xs bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col transition-transform duration-300 ease-out overflow-y-auto">
               <div className="flex items-center justify-between h-16 px-4 border-b border-gray-100 rounded-t-2xl bg-[#3b3bb7]">
-                {/* Logo */}
+                
                 <Link href="/" className="shrink-0" onClick={closeMenu}>
                   <Image
                     src="/assets/logo.jpg"
@@ -124,7 +124,7 @@ const Navbar = () => {
                     priority
                   />
                 </Link>
-                {/* Close button */}
+             
                 <button
                   className="w-9 h-9 flex items-center justify-center focus:outline-none relative"
                   onClick={closeMenu}
@@ -157,7 +157,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Spacer */}
+      
       <div className="h-16 md:h-20" />
     </>
   );

@@ -6,14 +6,12 @@ import { HiArrowRight } from 'react-icons/hi';
 
 export default function Footer() {
   return (
-    // 1. ADDED explicit background color and gradient here as a fallback
-    // 2. 'relative' allows absolute children to position inside it
+
     <footer className="relative w-full text-white pt-16 opacity-100 pb-8 bg-gradient-to-r from-[#a364df] to-[#3e3ec5]">
       
-      {/* BACKGROUND IMAGE LAYER */}
-      {/* We use absolute inset-0 to stretch it, and mix-blend-mode to blend with the gradient above */}
+    
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
-         {/* Ensure the path '/assets/footerimg.png' exists in your public folder */}
+
         <Image
           src="/assets/footerimg.jpg"
           alt="Footer Background"
@@ -21,16 +19,15 @@ export default function Footer() {
           className="object-cover opacity-40 mix-blend-overlay"
           priority
         />
-        {/* Extra overlay to ensure text readability if image is too bright */}
+  
         <div className="absolute inset-0 bg-[#3b3bb7]/40" />
       </div>
 
-      {/* MAIN CONTENT - z-10 ensures it sits ON TOP of the background */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 mb-12 text-center md:text-left">
           
-          {/* COLUMN 1: Logo & Socials */}
+ 
           <div className="md:col-span-4 flex flex-col items-center md:items-start space-y-6">
             <div className="relative w-32 h-20 md:w-40 md:h-24">
               <Image 
@@ -58,7 +55,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* COLUMN 2: Quick Links */}
+       
           <div className="md:col-span-3 md:col-start-6 flex flex-col items-center md:items-start">
             <h3 className="text-xl font-medium mb-6 relative inline-block">
               Quick Links
@@ -76,7 +73,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* COLUMN 3: Contact Info & Newsletter */}
+     
           <div className="md:col-span-4 flex flex-col items-center md:items-start">
             <h3 className="text-xl font-medium mb-6 relative inline-block">
               Contact Info
@@ -90,7 +87,7 @@ export default function Footer() {
 
             <h3 className="text-xl font-medium mb-4">Email Address</h3>
             
-            {/* Pink Pill Shape Form */}
+        
             <form className="w-full max-w-sm flex items-center bg-[#d66095] rounded-full p-1 shadow-lg">
               <input
                 type="email"
@@ -107,7 +104,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Footer Bottom Line */}
+      
         <div className="w-full h-0.5 bg-[#D35CA7] my-6" />
         
         <div className="text-center text-xs md:text-sm font-light text-white/80">

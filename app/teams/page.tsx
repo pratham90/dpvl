@@ -11,20 +11,20 @@ const page = () => {
      <Navbar />
         <section className={`relative w-full h-[500px] md:h-[450px] overflow-hidden bg-[#1a237e]`}>
             
-            {/* 1. BACKGROUND LAYERS */}
+        
             <div className="absolute inset-0 w-full h-full z-0">
-              {/* Base Gradient */}
+       
               <div className="absolute inset-0 bg-gradient-to-r from-[#5338d6] via-[#2a2a72] to-[#1a237e]" />
               
-              {/* Background Texture (Monument/Arch) */}
+             
               <Image
-                src="/assets/footerimg.jpg" // Using your standard asset
+                src="/assets/footerimg.jpg" 
                 alt="Background Texture"
                 fill
                 className="object-cover opacity-20 mix-blend-overlay"
               />
       
-              {/* Tech Lines Pattern (Left Side) */}
+            
               <div 
                 className="absolute top-0 left-0 w-1/3 h-full opacity-30" 
                 style={{ 
@@ -33,11 +33,9 @@ const page = () => {
               />
             </div>
       
-            {/* 2. MAIN CONTENT */}
             <div className="relative z-10 w-full h-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-center md:justify-between">
               
-              {/* LEFT: Text Content */}
-              {/* Mobile: Centered | Desktop: Left Aligned */}
+        
               <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left z-20 mt-10 md:mt-0">
                 <h2 className="text-white font-mokoto font-bold text-4xl sm:text-5xl md:text-6xl tracking-widest mb-4" style={{ fontFamily: 'var(--font-orbitron)' }}>
                   TEAMS
@@ -49,10 +47,9 @@ const page = () => {
                 
               </div>
       
-              {/* RIGHT: Visual Composition (Ball + Floor Text) */}
+  
               <div className="flex-1 relative w-full h-full flex items-end justify-center md:justify-end pb-8 md:pb-12">
-                
-                {/* 3D Floor Text Effect */}
+          
                 <div 
                   className="absolute bottom-4 md:bottom-8 right-0 md:right-10 text-[100px] md:text-[140px] font-black text-white/10 leading-none select-none pointer-events-none"
                   style={{ 
@@ -64,12 +61,8 @@ const page = () => {
                   TEAMS
                 </div>
       
-                {/* Volleyball Image */}
                 <div className="relative w-48 h-48 md:w-72 md:h-72 z-10 animate-float">
-                   {/* 
-                      Use a transparent PNG of a volleyball here. 
-                      The URL below is a placeholder.
-                   */}
+            
                    <div className="relative w-full h-full drop-shadow-[0_20px_20px_rgba(0,0,0,0.5)]">
                       <Image 
                         src="/assets/footerimg.jpg" 
@@ -83,7 +76,7 @@ const page = () => {
       
             </div>
       
-            {/* 3. FLOATING SOCIAL SIDEBAR (Right Edge) */}
+ 
             <div className="hidden md:flex flex-col gap-5 absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-[#0d1033] py-6 px-3 rounded-l-2xl border-l border-white/10 shadow-2xl">
               <a href="#" className="text-white hover:text-pink-500 transition-colors transform hover:scale-110"><FaInstagram size={22} /></a>
               <a href="#" className="text-white hover:text-blue-500 transition-colors transform hover:scale-110"><FaFacebookF size={22} /></a>

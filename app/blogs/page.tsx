@@ -23,12 +23,12 @@ const blogPosts = [
        <Heroo title="BLOGS" subtitle="The league that fuels ambition, celebrates skill, and brings volleyball to life." />
       <section className="relative w-full py-20 px-4 md:px-8 overflow-hidden bg-[#d66095]">
       
-      {/* 1. BACKGROUND LAYER */}
+  
       <div className="absolute inset-0 w-full h-full z-0">
-        {/* Pink/Purple Gradient */}
+      
         <div className="absolute inset-0 bg-gradient-to-br opacity-80 from-[#d66095] via-[#a259e6] to-[#6a1b9a]" />
         
-        {/* Texture/Pattern Overlay */}
+   
         <Image
           src="/assets/footerimg.jpg"
           alt="Background Texture"
@@ -36,7 +36,6 @@ const blogPosts = [
           className="object-cover opacity-50 mix-blend-multiply"
         />
         
-        {/* Decorative 'Net' or 'Line' Pattern Overlay */}
         <div 
           className="absolute inset-0 opacity-10"
           style={{ 
@@ -47,8 +46,7 @@ const blogPosts = [
 
       <div className="relative z-10 max-w-6xl mx-auto">
         
-        {/* 2. GRID LAYOUT */}
-        {/* Mobile: 1 col | Tablet: 2 cols | Desktop: 3 cols */}
+  
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
           
           {blogPosts.map((post, index) => (
@@ -57,22 +55,21 @@ const blogPosts = [
               className="w-full max-w-sm bg-[#3b3bb7] rounded-xl p-4 flex flex-col items-center text-center shadow-2xl hover:-translate-y-2 transition-transform duration-300 border border-white/10"
             >
               
-              {/* Card Image */}
+        
               <div className="relative w-full h-48 rounded-lg overflow-hidden mb-6">
                 <Image
-                  src={post.image} // Using footerimg.jpg as requested placeholder
+                  src={post.image} 
                   alt="Volleyball Action"
                   fill
                   className="object-cover"
                 />
               </div>
 
-              {/* Card Text */}
               <p className="text-white text-lg font-medium leading-snug mb-8 px-2">
                 {post.text}
               </p>
 
-              {/* Read Here Button */}
+           
               <Link href="/detailed-blog">
               <button className="bg-[#d66095] hover:bg-[#c2185b] text-white text-sm font-bold uppercase py-2 px-8 rounded-full shadow-lg transition-colors duration-300 tracking-wider">
                 Read Here

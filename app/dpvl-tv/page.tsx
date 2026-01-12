@@ -11,11 +11,11 @@ const videos = [
   {
     id: 1,
     title: "DPVL Set for Biggest Season Yet as Teams Gear Up for Action.",
-    image: "/assets/footerimg.jpg", // Replace with actual thumbnails
+    image: "/assets/footerimg.jpg",
   },
   {
     id: 2,
-    title: "", // No title in some cards as per image
+    title: "", 
     image: "/assets/footerimg.jpg",
   },
   {
@@ -40,21 +40,19 @@ const videos = [
      <Navbar />
        <Heroo title="DPVL TV" subtitle="The league that fuels ambition, celebrates skill, and brings volleyball to life." />
        <section className="relative w-full py-16 px-4 bg-[#3b3bb7] overflow-hidden">
-      
-      {/* 1. BACKGROUND LAYERS */}
+   
       <div className="absolute inset-0 w-full h-full z-0">
-        {/* Deep Blue/Purple Gradient */}
+  
         <div className="absolute inset-0 bg-gradient-to-b from-[#4a148c] via-[#3b3bb7] to-[#1a237e]" />
         
-        {/* Texture Overlay (footerimg.jpg) */}
+     
         <Image
           src="/assets/footerimg.jpg"
           alt="Background Texture"
           fill
           className="object-cover opacity-30 mix-blend-overlay"
         />
-        
-        {/* Floor Pattern Overlay (Optional - mimics court lines in background) */}
+   
         <div 
           className="absolute inset-0 opacity-10" 
           style={{ 
@@ -66,17 +64,16 @@ const videos = [
 
       <div className="relative z-10 max-w-6xl mx-auto">
         
-        {/* 2. HEADING */}
+      
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold uppercase text-white mb-2 tracking-tight" style={{ fontFamily: 'sans-serif' }}>
             DPVL TV
           </h2>
-          {/* Red/Pink Underline */}
+         
           <div className="w-20 h-1 bg-[#d9534f] shadow-[0_0_10px_#d9534f]" />
         </div>
 
-        {/* 3. VIDEO GRID */}
-        {/* Mobile: 1 col | Tablet: 2 cols | Desktop: 3 cols */}
+     
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-center items-start">
           
           {videos.map((video) => (
@@ -84,11 +81,10 @@ const videos = [
               key={video.id} 
               className="relative group w-full aspect-[4/5] p-2 bg-gradient-to-br from-[#d66095] to-[#7b1fa2] rounded-xl shadow-2xl hover:scale-[1.02] transition-transform duration-300"
             >
-              
-              {/* Inner Card Container */}
+          
               <div className="relative w-full h-full rounded-lg overflow-hidden bg-black">
                 
-                {/* Image */}
+         
                 <Image
                   src={video.image}
                   alt="Video Thumbnail"
@@ -96,17 +92,16 @@ const videos = [
                   className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
                 />
                 
-                {/* Dark Gradient Overlay (for text visibility) */}
+              
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
 
-                {/* Center Play Button */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-14 h-14 md:w-16 md:h-16 bg-white rounded-full flex items-center justify-center pl-1 shadow-lg group-hover:scale-110 transition-transform duration-300 cursor-pointer">
                     <FaPlay className="text-black text-xl md:text-2xl" />
                   </div>
                 </div>
 
-                {/* Video Title (If exists) */}
+                
                 {video.title && (
                   <div className="absolute bottom-0 left-0 w-full p-4 md:p-6">
                     <p className="text-white text-sm md:text-base font-medium leading-snug drop-shadow-md">

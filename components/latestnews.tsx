@@ -35,7 +35,6 @@ export default function LatestNews() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(1);
 
-  // Responsive logic: 1 card on mobile, 2 on tablet, 3 on desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -47,7 +46,7 @@ export default function LatestNews() {
       }
     };
 
-    handleResize(); // Initial check
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -65,7 +64,7 @@ export default function LatestNews() {
   return (
     <section className="relative w-full py-20 overflow-hidden bg-[#2a2a72]">
       
-      {/* 1. SECTION BACKGROUND */}
+   
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/footerimg.jpg"
@@ -73,18 +72,16 @@ export default function LatestNews() {
           fill
           className="object-cover opacity-30 mix-blend-overlay"
         />
-        {/* Deep Purple/Blue Gradient Overlay */}
+      
         <div className="absolute inset-0 bg-gradient-to-r from-[#512da8]/90 via-[#311b92]/80 to-[#512da8]/90 mix-blend-multiply" />
-        
-        {/* Neon Light Accents (Left & Right) */}
+       
         <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#d66095]/40 to-transparent blur-3xl" />
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#d66095]/40 to-transparent blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8">
         
-        {/* 2. HEADER */}
-        {/* Centered on mobile, Left-aligned on Desktop */}
+   
         <div className="flex flex-col items-center md:items-start mb-10 md:mb-12">
           <h2 className="text-4xl md:text-5xl font-bold uppercase italic text-white mb-2" style={{ fontFamily: 'sans-serif' }}>
             Latest News
@@ -92,10 +89,8 @@ export default function LatestNews() {
           <div className="w-24 h-1 bg-[#d66095] shadow-[0_0_10px_#d66095]" />
         </div>
 
-        {/* 3. CAROUSEL CONTAINER */}
         <div className="relative group">
-          
-          {/* Slider Track */}
+       
           <div className="overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-in-out gap-6"
@@ -110,18 +105,17 @@ export default function LatestNews() {
                     height: '350px' 
                   }}
                 >
-                  {/* Card Image */}
+        
                   <Image
                     src={news.image}
                     alt={news.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover/card:scale-110"
                   />
-                  
-                  {/* Dark Gradient Overlay for Text */}
+            
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
-                  {/* Card Content */}
+               
                   <div className="absolute bottom-0 left-0 w-full p-6 flex flex-col gap-2">
                     <p className="text-white text-lg leading-snug font-medium">
                       <span className="font-bold text-xl">DPVL</span> {news.title.replace('DPVL ', '')}
@@ -135,10 +129,7 @@ export default function LatestNews() {
             </div>
           </div>
 
-          {/* 4. NAVIGATION ARROWS */}
-          {/* Positioned absolute on the sides, similar to the image */}
-          
-          {/* Prev Button */}
+       
           <button 
             onClick={prevSlide}
             className="absolute top-1/2 -left-2 md:-left-8 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/30 backdrop-blur-sm text-white rounded-full flex items-center justify-center transition-all"
@@ -146,7 +137,6 @@ export default function LatestNews() {
             <FaChevronLeft size={24} />
           </button>
 
-          {/* Next Button */}
           <button 
             onClick={nextSlide}
             className="absolute top-1/2 -right-2 md:-right-8 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-white/10 hover:bg-white/30 backdrop-blur-sm text-white rounded-full flex items-center justify-center transition-all"

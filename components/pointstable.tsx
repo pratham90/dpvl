@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 export default function Pointstable() {
-  // Mock Data to generate the rows
+
   const teams = new Array(8).fill({
     pos: 1,
     name: 'TEAM NAME',
@@ -11,20 +11,20 @@ export default function Pointstable() {
     l: 0,
     nrr: 0,
     for: 0,
-    against: ['W', 'W', 'L', 'W'], // The form guide circles
+    against: ['W', 'W', 'L', 'W'], 
     pts: 0,
   });
 
   return (
     <section className="relative w-full min-h-screen py-16 px-4 overflow-hidden bg-[#3b3bb7]">
       
-      {/* 1. Background Layers */}
+   
       <div className="absolute inset-0 w-full h-full z-0">
-        {/* The deep blue/purple gradient */}
+  
         <div className="absolute inset-0 bg-gradient-to-br from-[#4a7acdf5] via-[#3b3bb7] to-[#a259e6] z-10 opacity-60" />
-        {/* Background Image (India Gate silhouette style) */}
+       
         <Image
-          src="/assets/footerimg.jpg" // Ensure this path exists or replace with a placeholder
+          src="/assets/footerimg.jpg" 
           alt="Background Texture"
           fill
           className="object-cover opacity-50 mix-blend-overlay"
@@ -33,7 +33,7 @@ export default function Pointstable() {
 
       <div className="relative z-20 max-w-7xl mx-auto w-full flex flex-col items-center">
         
-        {/* 2. Heading */}
+     
         <div className="flex flex-col items-center mb-10">
           <h2 className="text-4xl md:text-5xl text-white font-bold uppercase tracking-tight mb-2" style={{ fontFamily: 'sans-serif' }}>
             Points Table
@@ -41,12 +41,10 @@ export default function Pointstable() {
           <div className="w-24 h-1 bg-[#d66095] rounded-full" />
         </div>
 
-        {/* 3. The Table Container */}
-        {/* overflow-x-auto allows scrolling on mobile while keeping layout intact */}
         <div className="w-full overflow-x-auto pb-4">
           <table className="w-full min-w-[900px] border-separate border-spacing-y-3">
             
-            {/* Table Header */}
+     
             <thead>
               <tr className="bg-[#d66095] text-black uppercase text-sm md:text-base font-bold tracking-wider shadow-md">
                 <th className="py-3 px-4 w-16 rounded-l-md text-center">POS</th>
@@ -61,20 +59,18 @@ export default function Pointstable() {
               </tr>
             </thead>
 
-            {/* Table Body */}
             <tbody>
               {teams.map((team, index) => (
                 <tr key={index} className="bg-white hover:scale-[1.01] transition-transform duration-200 shadow-sm group">
                   
-                  {/* Position */}
+          
                   <td className="py-3 px-4 text-center font-bold text-xl border-l-4 border-transparent group-hover:border-[#d66095] rounded-l-md">
                     {team.pos}
                   </td>
 
-                  {/* Team Name & Logo */}
                   <td className="py-3 px-4">
                     <div className="flex items-center gap-4">
-                      {/* Logo Placeholder */}
+                    
                       <div className="w-10 h-10 rounded-full bg-pink-100 border-2 border-[#d66095] flex items-center justify-center text-[10px] font-bold text-[#d66095]">
                         TBD
                       </div>
@@ -84,14 +80,13 @@ export default function Pointstable() {
                     </div>
                   </td>
 
-                  {/* Stats Columns */}
                   <td className="py-3 px-2 text-center font-semibold text-lg">{team.p}</td>
                   <td className="py-3 px-2 text-center font-semibold text-lg">{team.w}</td>
                   <td className="py-3 px-2 text-center font-semibold text-lg">{team.l}</td>
                   <td className="py-3 px-2 text-center font-semibold text-lg">{team.nrr}</td>
                   <td className="py-3 px-2 text-center font-semibold text-lg">{team.for}</td>
 
-                  {/* Form Guide (Win/Loss Pills) */}
+                
                   <td className="py-3 px-4">
                     <div className="flex items-center justify-center gap-1">
                       {team.against.map(({result}: {result: string}, {i}: {i: number}) => (
@@ -106,7 +101,7 @@ export default function Pointstable() {
                     </div>
                   </td>
 
-                  {/* Points (with left border separator) */}
+                
                   <td className="py-3 px-4 text-center rounded-r-md relative">
                     <div className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-[2px] bg-gray-300"></div>
                     <span className="font-bold text-xl text-black">{team.pts}</span>
