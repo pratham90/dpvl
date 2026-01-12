@@ -38,7 +38,7 @@ export default function Heroo({
         {/* Left: Text Content */}
         {/* Mobile: Centered | Desktop: Left Aligned */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-lg mt-10 md:mt-0">
-          <h1 className="text-white font-sans font-bold text-4xl sm:text-5xl md:text-6xl tracking-widest mb-4" style={{ fontFamily: 'var(--font-orbitron)' }}>
+          <h1 className="text-white font-sans font-bold  font-mokoto text-4xl sm:text-5xl md:text-6xl tracking-widest mb-4" style={{ fontFamily: 'var(--font-orbitron)' }}>
             {title}
           </h1>
           <p className="text-white/90 text-base md:text-lg font-light leading-relaxed">
