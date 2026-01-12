@@ -39,7 +39,7 @@ const page = () => {
       <div className="relative z-10 w-full h-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-center md:justify-between">
         
     
-        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left z-20 mt-10 md:mt-0">
+        <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left z-20 mt-20 md:mt-0">
           <h2 className="text-white font-mokoto font-bold text-4xl sm:text-5xl md:text-6xl tracking-widest mb-4" style={{ fontFamily: 'var(--font-orbitron)' }}>
             ABOUT US
           </h2>
